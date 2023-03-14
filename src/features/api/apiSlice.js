@@ -7,10 +7,10 @@ export const apiSlice = createApi({
     }),
     tagTypes: ["Videos", "Video", "RelatedVideos"],
     endpoints: (builder) => ({
-        getVideos: builder.query({
-            query: () => "/videos",
+        getBooks: builder.query({
+            query: () => "/books",
             keepUnusedDataFor: 600,
-            providesTags: ["Videos"],
+            // providesTags: ["Videos"],
         }),
         getVideo: builder.query({
             query: (videoId) => `/videos/${videoId}`,
@@ -58,7 +58,7 @@ export const apiSlice = createApi({
 });
 
 export const {
-    useGetVideosQuery,
+    useGetBooksQuery,
     useGetVideoQuery,
     useGetRelatedVideosQuery,
     useAddVideoMutation,
