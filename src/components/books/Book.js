@@ -1,8 +1,15 @@
 import React from "react";
 import Star from "./star/Star";
+import { useDeleteBookMutation } from "../../features/api/apiSlice";
 
 function Book({ book }) {
+  const [deleteBook,{}]=useDeleteBookMutation()
+
   const { name, author, thumbnail, price, rating, featured, id } = book;
+  const deleteHandler = (id)=>{
+  
+    deleteBook(id)
+  }
   return (
     <div>
       <div class="book-card">
@@ -27,7 +34,7 @@ function Book({ book }) {
                   />
                 </svg>
               </button>
-              <button class="lws-deleteBook">
+              <button class="lws-deleteBook" onClick={()=>deleteHandler(id)}>
                 <svg
                   fill="none"
                   viewBox="0 0 24 24"
@@ -49,7 +56,7 @@ function Book({ book }) {
             <h4 class="lws-book-name">{name}</h4>
             <p class="lws-author">{author}</p>
             <div class="lws-stars">
-                {[...Array(rating)].map(item=><Star />)}
+                {[...Array(parseInt(rating))].map(item=><Star />)}
             </div>
             <p class="lws-price">BDT {price}</p>
           </div>
