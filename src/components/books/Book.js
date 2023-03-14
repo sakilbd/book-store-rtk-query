@@ -1,14 +1,21 @@
 import React from "react";
 import Star from "./star/Star";
 import { useDeleteBookMutation } from "../../features/api/apiSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 function Book({ book }) {
-  const [deleteBook,{}]=useDeleteBookMutation()
+  const [deleteBook,{}]=useDeleteBookMutation();
+  const navigate = useNavigate
 
   const { name, author, thumbnail, price, rating, featured, id } = book;
   const deleteHandler = (id)=>{
   
     deleteBook(id)
+  }
+  const editHandler = (id) =>{
+    // alert("hurrah")
+    navigate(`/books/edit/1`)
+
   }
   return (
     <div>
@@ -19,7 +26,8 @@ function Book({ book }) {
             {featured? <span class="lws-badge">featured</span>:<span></span>}
            
             <div class="text-gray-500 space-x-2">
-              <button class="lws-edit ">
+              <Link to={`/books/edit/${id}`}>
+              <button class="lws-edit " onClick={()=>editHandler(id)}>
                 <svg
                   fill="none"
                   viewBox="0 0 24 24"
@@ -34,6 +42,7 @@ function Book({ book }) {
                   />
                 </svg>
               </button>
+              </Link>
               <button class="lws-deleteBook" onClick={()=>deleteHandler(id)}>
                 <svg
                   fill="none"

@@ -1,13 +1,22 @@
 {
   "books": [
     {
-      "name": "Roary Odom",
-      "author": "Quis sit qui tenetu",
-      "thumbnail": "Cumque maxime nulla ",
-      "price": "513",
-      "rating": "1",
-      "featured": true,
-      "id": 4
+      "name": "Myra Velazquez",
+      "author": "Porro nesciunt comm",
+      "thumbnail": "Amet pariatur Sed ",
+      "price": "68",
+      "rating": "2",
+      "featured": false,
+      "id": 5
+    },
+    {
+      "name": "Hammett Bruce",
+      "author": "Ipsa enim lorem off",
+      "thumbnail": "Officiis nemo cillum",
+      "price": "268",
+      "rating": "2",
+      "featured": false,
+      "id": 6
     }
   ]
 }
