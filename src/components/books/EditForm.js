@@ -1,17 +1,37 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import { useEditBookMutation } from "../../features/api/apiSlice";
 
 function EditForm({ book }) {
-  const { name:initialName, author:initialAuthor, thumbnail:initialThumbnail, price:initialPrice, rating:initialRating, featured:initialFeatured } = book;
-  const [name, setName] = useState("");
-  const [author, setAuthor] = useState("");
-  const [thumbnail, setThumbnail] = useState("");
-  const [price, setPrice] = useState("");
-  const [rating, setRating] = useState("");
-  const [featured, setFeatured] = useState(false);
+  const {
+    name: initialName,
+    author: initialAuthor,
+    thumbnail: initialThumbnail,
+    price: initialPrice,
+    rating: initialRating,
+    featured: initialFeatured,
+    id,
+  } = book;
+  const [editBook]   = useEditBookMutation();
+  const navigate = useNavigate();
+  const [name, setName] = useState(initialName);
+  const [author, setAuthor] = useState(initialAuthor);
+  const [thumbnail, setThumbnail] = useState(initialThumbnail);
+  const [price, setPrice] = useState(initialPrice);
+  const [rating, setRating] = useState(initialRating);
+  const [featured, setFeatured] = useState(initialFeatured);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    // alert(id);
+    editBook({
+      id,
+      data: { name, author, thumbnail, price, rating, featured },
+    });
+    navigate("/");
+  };
   return (
     <div>
-      <form class="book-form">
+      <form class="book-form" onSubmit={submitHandler}>
         <div class="space-y-2">
           <label for="lws-bookName">Book Name</label>
           <input
@@ -20,7 +40,8 @@ function EditForm({ book }) {
             type="text"
             id="lws-bookName"
             name="name"
-            value={initialName}
+            onChange={(e) => setName(e.target.value)}
+            defaultValue={initialName}
           />
         </div>
 
@@ -32,7 +53,8 @@ function EditForm({ book }) {
             type="text"
             id="lws-author"
             name="author"
-            value={initialAuthor}
+            onChange={(e) => setAuthor(e.target.value)}
+            defaultValue={initialAuthor}
           />
         </div>
 
@@ -44,7 +66,8 @@ function EditForm({ book }) {
             type="text"
             id="lws-thumbnail"
             name="thumbnail"
-            value={initialThumbnail}
+            onChange={(e) => setThumbnail(e.target.value)}
+            defaultValue={initialThumbnail}
           />
         </div>
 
@@ -57,7 +80,8 @@ function EditForm({ book }) {
               type="number"
               id="lws-price"
               name="price"
-              value={initialPrice}
+              onChange={(e) => setPrice(e.target.value)}
+              defaultValue={initialPrice}
             />
           </div>
 
@@ -71,7 +95,8 @@ function EditForm({ book }) {
               name="rating"
               min="1"
               max="5"
-              value={initialRating}
+              onChange={(e) => setRating(e.target.value)}
+              defaultValue={initialRating}
             />
           </div>
         </div>
@@ -82,8 +107,8 @@ function EditForm({ book }) {
             type="checkbox"
             name="featured"
             class="w-4 h-4"
-            checked={initialFeatured}
-           
+            onChange={(e) => setFeatured(e.target.checked)}
+            defaultChecked={initialFeatured}
           />
           <label for="lws-featured" class="ml-2 text-sm">
             {" "}

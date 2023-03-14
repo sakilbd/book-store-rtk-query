@@ -5,7 +5,7 @@ export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:9000",
     }),
-    tagTypes: ["Books", "book", "RelatedVideos"],
+    tagTypes: ["Books", "Book", "RelatedVideos"],
     endpoints: (builder) => ({
         getBooks: builder.query({
             query: () => "/books",
@@ -14,7 +14,7 @@ export const apiSlice = createApi({
         }),
         getBook: builder.query({
             query: (id) => `/books/${id}`,
-            providesTags: (result, error, arg) => [{ type: "book", id: arg }],
+            providesTags: (result, error, arg) => [{ type: "Book", id: arg }],
         }),
         getRelatedVideos: builder.query({
             query: ({ id, title }) => {
@@ -35,16 +35,16 @@ export const apiSlice = createApi({
             }),
             invalidatesTags: ["Books"],
         }),
-        editVideo: builder.mutation({
+        editBook: builder.mutation({
             query: ({ id, data }) => ({
-                url: `/videos/${id}`,
+                url: `/books/${id}`,
                 method: "PATCH",
                 body: data,
             }),
             invalidatesTags: (result, error, arg) => [
-                "Videos",
-                { type: "Video", id: arg.id },
-                { type: "RelatedVideos", id: arg.id },
+                "Books",
+                { type: "Book", id: arg.id },
+                
             ],
         }),
         deleteBook: builder.mutation({
@@ -61,8 +61,9 @@ export const {
     useGetBooksQuery,
     useAddBookMutation,
     useGetBookQuery,
+    useEditBookMutation,
     useGetRelatedVideosQuery,
     useAddVideoMutation,
-    useEditVideoMutation,
+    
     useDeleteBookMutation,
 } = apiSlice;

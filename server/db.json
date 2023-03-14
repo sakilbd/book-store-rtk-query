@@ -2,9 +2,9 @@
   "books": [
     {
       "name": "Myra Velazquez",
-      "author": "Porro nesciunt comm",
+      "author": "pakil",
       "thumbnail": "Amet pariatur Sed ",
-      "price": "68",
+      "price": "6888",
       "rating": "2",
       "featured": false,
       "id": 5
@@ -13,9 +13,9 @@
       "name": "Hammett Bruce",
       "author": "Ipsa enim lorem off",
       "thumbnail": "Officiis nemo cillum",
-      "price": "268",
+      "price": "2688",
       "rating": "2",
-      "featured": false,
+      "featured": true,
       "id": 6
     }
   ]
