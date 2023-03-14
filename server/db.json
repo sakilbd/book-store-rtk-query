@@ -26,6 +26,60 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "Kaseem Koch",
+      "author": "Nihil ullam enim qui",
+      "thumbnail": "Velit consequat Vol",
+      "price": "820",
+      "rating": "3",
+      "featured": false,
+      "id": 5
+    },
+    {
+      "name": "Eaton Everett",
+      "author": "Ut libero dolorum as",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "503",
+      "rating": "1",
+      "featured": false,
+      "id": 6
+    },
+    {
+      "name": "Delilah Kane",
+      "author": "Ducimus iste eligen",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "293",
+      "rating": "4",
+      "featured": true,
+      "id": 7
+    },
+    {
+      "name": "Ruby Cain",
+      "author": "Ullamco quia officia",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "819",
+      "rating": "1",
+      "featured": false,
+      "id": 8
+    },
+    {
+      "name": "Berk Lane",
+      "author": "Mollitia qui iusto n",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "196",
+      "rating": "3",
+      "featured": true,
+      "id": 9
+    },
+    {
+      "name": "Lareina Rollins",
+      "author": "Sapiente minima labo",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "779",
+      "rating": "4",
+      "featured": false,
+      "id": 10
     }
   ]
 }
