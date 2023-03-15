@@ -10,13 +10,31 @@
       "id": 5
     },
     {
-      "name": "Hammett Bruce",
-      "author": "Ipsa enim lorem off",
-      "thumbnail": "Officiis nemo cillum",
-      "price": "2688",
-      "rating": "2",
+      "name": "Kareem Mays",
+      "author": "Dolor aut ex molesti",
+      "thumbnail": "Vel totam sunt et in",
+      "price": "476",
+      "rating": "3",
       "featured": true,
       "id": 6
+    },
+    {
+      "name": "Maggy Ortega",
+      "author": "Ad Nam est commodo ",
+      "thumbnail": "Et atque sint et deb",
+      "price": "122",
+      "rating": "1",
+      "featured": true,
+      "id": 7
+    },
+    {
+      "name": "Thomas Hickman",
+      "author": "Excepteur est quia ",
+      "thumbnail": "Repudiandae mollitia",
+      "price": "485",
+      "rating": "2",
+      "featured": false,
+      "id": 8
     }
   ]
 }
