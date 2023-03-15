@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
+import {createSlice } from "@reduxjs/toolkit";
 export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
@@ -16,17 +16,7 @@ export const apiSlice = createApi({
             query: (id) => `/books/${id}`,
             providesTags: (result, error, arg) => [{ type: "Book", id: arg }],
         }),
-        getRelatedVideos: builder.query({
-            query: ({ id, title }) => {
-                const tags = title.split(" ");
-                const likes = tags.map((tag) => `title_like=${tag}`);
-                const queryString = `/videos?${likes.join("&")}&_limit=4`;
-                return queryString;
-            },
-            providesTags: (result, error, arg) => [
-                { type: "RelatedVideos", id: arg.id },
-            ],
-        }),
+       
         addBook: builder.mutation({
             query: (data) => ({
                 url: "/books",
@@ -62,8 +52,5 @@ export const {
     useAddBookMutation,
     useGetBookQuery,
     useEditBookMutation,
-    useGetRelatedVideosQuery,
-    useAddVideoMutation,
-    
     useDeleteBookMutation,
 } = apiSlice;
