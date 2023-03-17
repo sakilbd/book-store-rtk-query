@@ -116,7 +116,7 @@ function EditForm({ book }) {
           </label>
         </div>
 
-        <button type="submit" class="submit" id="lws-submit">
+        <button type="submit" class="submit" id="lws-submit" style={{ background:"#6861EE" }}>
           Edit Book
         </button>
       </form>

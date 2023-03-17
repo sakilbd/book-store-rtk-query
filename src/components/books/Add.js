@@ -66,7 +66,7 @@ function Add() {
                         <label for="lws-featured" class="ml-2 text-sm"> This is a featured book </label>
                     </div>
 
-                    <button type="submit" class="submit" id="lws-submit">Add Book</button>
+                    <button type="submit" class="submit" id="lws-submit" style={{ background:"#6861EE" }}>Add Book</button>
                 </form>
             </div>
         </div>

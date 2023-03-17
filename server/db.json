@@ -1,49 +1,22 @@
 {
   "books": [
     {
-      "name": "Haviva Lee",
-      "author": "Dolor eius proident",
-      "thumbnail": "Ex voluptas veniam ",
-      "price": "509",
-      "rating": "5",
+      "name": "Desiree Pate",
+      "author": "Voluptatem iusto sed",
+      "thumbnail": "In nihil consectetur",
+      "price": "275",
+      "rating": "1",
       "featured": true,
-      "id": 6
+      "id": 1
     },
     {
-      "name": "Maggy Ortega",
-      "author": "Ad Nam est commodo ",
-      "thumbnail": "Et atque sint et deb",
-      "price": "122",
-      "rating": "2",
+      "name": "Yeo Cameron",
+      "author": "Anim expedita volupt",
+      "thumbnail": "Sint dignissimos ad ",
+      "price": "523",
+      "rating": "1",
       "featured": false,
-      "id": 7
-    },
-    {
-      "name": "Ebony Cash",
-      "author": "Eum sunt ut omnis it",
-      "thumbnail": "Ullam illo ad rerum ",
-      "price": "698",
-      "rating": "5",
-      "featured": true,
-      "id": 9
-    },
-    {
-      "name": "Clark Kirk",
-      "author": "sakil",
-      "thumbnail": "Eu cum eum eius temp",
-      "price": "65",
-      "rating": "5",
-      "featured": true,
-      "id": 10
-    },
-    {
-      "name": "Dustin Holman",
-      "author": "Temporibus ut exerci",
-      "thumbnail": "Commodi commodi dele",
-      "price": "758",
-      "rating": "5",
-      "featured": false,
-      "id": 11
+      "id": 2
     }
   ]
 }

@@ -7,7 +7,7 @@ import  {setSearchText}  from '../features/searchSlice'
 function Nav() {
   const dispatch = useDispatch();
   const onchangeHandler = (e) =>{
-    console.log(e.target.value)
+   
     dispatch(setSearchText(e.target.value));
   }
   return (
